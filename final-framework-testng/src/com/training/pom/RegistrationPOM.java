@@ -37,7 +37,7 @@ private WebDriver driver;
 	private WebElement add1;
 	
 	@FindBy(id="input-city")
-	private WebElement city;
+	private WebElement city; 
 	
 	@FindBy(id="input-postcode")
 	private WebElement postalcode;
