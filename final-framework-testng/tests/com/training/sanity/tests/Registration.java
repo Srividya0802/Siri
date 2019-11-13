@@ -55,9 +55,9 @@ public class Registration {
 		Rpom.clickuserRegisterBtn();
 		Rpom.sendFirstName("Srividya");
 		Rpom.sendLastName("Gupta");
-		Random rand = new Random(); 
+		Random rand = new Random(1000); 
 		int rand_int = rand.nextInt();
-		String email = "siri"+Integer.toString(rand_int);
+		String email = "siri"+Integer.toString(rand_int)+"@gmail.com";
 		Rpom.sendiemail(email);
 	    Rpom.sendTelephone("9880978783");
 		Rpom.sendAddress1("Jayanagar");
@@ -74,7 +74,7 @@ public class Registration {
 		screenShot.captureScreenShot("Reg_Details");
 		Rpom.clickContinue();
 		String conf_message = "Congratulations! Your new account has been successfully created!";
-		Assert.assertEquals(Rpom.successMessage.getText(),conf_message,"Message displayed not matching");
+		Assert.assertEquals(Rpom.successMessage.getText(),conf_message,"Message displayed not matching"+email);
 		screenShot.captureScreenShot("SuccessScreen");
 	}
 
