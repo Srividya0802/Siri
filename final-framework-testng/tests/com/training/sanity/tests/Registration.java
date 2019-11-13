@@ -11,7 +11,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
+import java.util.Random; 
 import com.training.generics.ScreenShot;
 import com.training.pom.LoginPOM;
 import com.training.pom.RegistrationPOM;
@@ -47,7 +47,7 @@ public class Registration {
 	@AfterMethod
 	public void tearDown() throws Exception {
 		Thread.sleep(1000);
-		//driver.quit();
+		driver.quit();
 	}
 	@Test
 	public void registerationProcessTest() throws InterruptedException {
@@ -55,8 +55,11 @@ public class Registration {
 		Rpom.clickuserRegisterBtn();
 		Rpom.sendFirstName("Srividya");
 		Rpom.sendLastName("Gupta");
-		Rpom.sendiemail("siri4@gmail.com");
-		Rpom.sendTelephone("9880978783");
+		Random rand = new Random(); 
+		int rand_int = rand.nextInt();
+		String email = "siri"+Integer.toString(rand_int);
+		Rpom.sendiemail(email);
+	    Rpom.sendTelephone("9880978783");
 		Rpom.sendAddress1("Jayanagar");
 		Rpom.sendCity("Bangalore");
 		Rpom.sendPostCode("560082");
