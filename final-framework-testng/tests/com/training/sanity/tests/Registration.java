@@ -47,20 +47,22 @@ public class Registration {
 	@AfterMethod
 	public void tearDown() throws Exception {
 		Thread.sleep(1000);
-		driver.quit();
+		//driver.quit();
 	}
 	@Test
-	public void registerationProcessTest() {
+	public void registerationProcessTest() throws InterruptedException {
 		Rpom.clickuserAccountBtn();
 		Rpom.clickuserRegisterBtn();
 		Rpom.sendFirstName("Srividya");
 		Rpom.sendLastName("Gupta");
-		Rpom.sendiemail("siri@gmail.com");
+		Rpom.sendiemail("siri4@gmail.com");
 		Rpom.sendTelephone("9880978783");
 		Rpom.sendAddress1("Jayanagar");
 		Rpom.sendCity("Bangalore");
 		Rpom.sendPostCode("560082");
+		Thread.sleep(1000);
 		Rpom.selectCountry("99");
+		Thread.sleep(1000);
 		Rpom.selectRegion("1489");
 		Rpom.sendPassword("vidya123");
 		Rpom.sendConfirmPassword("vidya123");
@@ -69,7 +71,7 @@ public class Registration {
 		screenShot.captureScreenShot("Reg_Details");
 		Rpom.clickContinue();
 		String conf_message = "Congratulations! Your new account has been successfully created!";
-		Assert.assertEquals(Rpom.successMessage,conf_message,"Message displayed not matching");
+		Assert.assertEquals(Rpom.successMessage.getText(),conf_message,"Message displayed not matching");
 		screenShot.captureScreenShot("SuccessScreen");
 	}
 

@@ -76,7 +76,7 @@ private WebDriver driver;
 		
 		public void selectCountry(String cid) {
 		Select selCountry = new Select(cntry);
-		selCountry.selectByValue("cid");
+		selCountry.selectByValue(cid);
 		
 	}
 	
