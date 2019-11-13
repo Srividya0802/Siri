@@ -2,23 +2,61 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="24" started-at="2019-11-11T13:30:31Z" finished-at="2019-11-11T13:30:31Z">
+  <suite name="Default suite" duration-ms="60189" started-at="2019-11-12T07:08:22Z" finished-at="2019-11-12T07:09:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="24" started-at="2019-11-11T13:30:31Z" finished-at="2019-11-11T13:30:31Z">
-      <class name="simple.TC001">
-        <test-method status="FAIL" signature="Registeration()[pri:0, instance:simple.TC001@af7cc2]" name="Registeration" duration-ms="10" started-at="2019-11-11T07:30:31Z" finished-at="2019-11-11T07:30:31Z">
-          <exception class="java.lang.Error">
+    <test name="Default test" duration-ms="60189" started-at="2019-11-12T07:08:22Z" finished-at="2019-11-12T07:09:22Z">
+      <class name="com.training.sanity.tests.LoginTests">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.LoginTests@a4a92b]" name="setUpBeforeClass" is-config="true" duration-ms="19" started-at="2019-11-12T01:08:22Z" finished-at="2019-11-12T01:08:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpBeforeClass -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.LoginTests@a4a92b]" name="setUp" is-config="true" duration-ms="27768" started-at="2019-11-12T01:08:22Z" finished-at="2019-11-12T01:08:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="validLoginTest()[pri:0, instance:com.training.sanity.tests.LoginTests@a4a92b]" name="validLoginTest" duration-ms="30466" started-at="2019-11-12T01:08:50Z" finished-at="2019-11-12T01:09:20Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Unresolved compilation problem: 
-	The operator ! is undefined for the argument type(s) void
-]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#pass2"}
+  (Session info: chrome=78.0.3904.97)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'DESKTOP-VGET4HH', ip: '192.168.43.61', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}), userDataDir=C:\Users\SRIVID~1\AppData\Local\Temp\scoped_dir13636_1526537965}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:56207}, acceptInsecureCerts=false, browserVersion=78.0.3904.97, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true}]
+Session ID: 46c26fd003497e82868e3362f4241b6f
+*** Element info: {Using=id, value=pass2}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.Error: Unresolved compilation problem: 
-	The operator ! is undefined for the argument type(s) void
-
-	at simple.TC001.Registeration(TC001.java:48)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#pass2"}
+  (Session info: chrome=78.0.3904.97)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.6.0', revision: '6fbf3ec767', time: '2017-09-27T15:28:36.4Z'
+System info: host: 'DESKTOP-VGET4HH', ip: '192.168.43.61', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_161'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{networkConnectionEnabled=false, chrome={chromedriverVersion=77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}), userDataDir=C:\Users\SRIVID~1\AppData\Local\Temp\scoped_dir13636_1526537965}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=dismiss and notify, strictFileInteractability=false, platform=XP, proxy=Proxy(), goog:chromeOptions={debuggerAddress=localhost:56207}, acceptInsecureCerts=false, browserVersion=78.0.3904.97, browserName=chrome, javascriptEnabled=true, platformName=XP, setWindowRect=true}]
+Session ID: 46c26fd003497e82868e3362f4241b6f
+*** Element info: {Using=id, value=pass2}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:586)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:402)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at com.training.pom.LoginPOM.clickLoginBtn(LoginPOM.java:36)
+	at com.training.sanity.tests.LoginTests.validLoginTest(LoginTests.java:52)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -45,11 +83,15 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.Error -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Registeration -->
-      </class> <!-- simple.TC001 -->
+        </test-method> <!-- validLoginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.LoginTests@a4a92b]" name="tearDown" is-config="true" duration-ms="1915" started-at="2019-11-12T01:09:20Z" finished-at="2019-11-12T01:09:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.training.sanity.tests.LoginTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

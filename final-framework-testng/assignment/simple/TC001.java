@@ -23,17 +23,27 @@ public class TC001 {
 	WebDriverWait w = new WebDriverWait(driver,20);
 	driver.manage().window().maximize();
 	driver.get("http://uniformm1.upskills.in");
-	driver.findElement(By.className("fa-user")).click();
+	
 	w.until(ExpectedConditions.elementToBeClickable(By.className("fa-user")));
-	driver.findElement(By.linkText("Register")).click();
+	driver.findElement(By.className("fa-user")).click();
+	
 	w.until(ExpectedConditions.elementToBeClickable(By.linkText("Register")));
-	driver.findElement(By.id("input-firstname")).sendKeys("Srividya");
+	driver.findElement(By.linkText("Register")).click();
+	
+		driver.findElement(By.id("input-firstname")).sendKeys("Srividya");
+		
+		
 	driver.findElement(By.id("input-lastname")).sendKeys("Gupta");
+	
 	driver.findElement(By.id("input-email")).sendKeys("sriv0802@gmail.com");
+	
 	driver.findElement(By.id("input-telephone")).sendKeys("9880963635");
 	driver.findElement(By.id("input-address-1")).sendKeys("Jayanagar");
+	
 	driver.findElement(By.id("input-city")).sendKeys("Bangalore");
+	
 	driver.findElement(By.id("input-postcode")).sendKeys("560082");
+	
 	Select country = new Select(driver.findElement(By.id("input-country")));
 		country.selectByValue("99");
 		Select region = new Select(driver.findElement(By.id("input-zone")));
