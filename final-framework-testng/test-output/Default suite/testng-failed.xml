@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.training.sanity.tests.ForgotPasswordTest">
+      <class name="com.training.sanity.tests.MediumSecondShopUniform">
         <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="ForgotPasswordProcess"/>
           <include name="setUpBeforeClass"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="shopUniform"/>
         </methods>
-      </class> <!-- com.training.sanity.tests.ForgotPasswordTest -->
+      </class> <!-- com.training.sanity.tests.MediumSecondShopUniform -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

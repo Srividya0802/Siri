@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="19369" started-at="2019-11-13T08:22:45Z" finished-at="2019-11-13T08:23:05Z">
+  <suite name="Default suite" duration-ms="24106" started-at="2019-11-15T16:05:15Z" finished-at="2019-11-15T16:05:40Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="19369" started-at="2019-11-13T08:22:45Z" finished-at="2019-11-13T08:23:05Z">
-      <class name="com.training.sanity.tests.PositiveLoginTest">
-        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.PositiveLoginTest@a4a92b]" name="setUpBeforeClass" is-config="true" duration-ms="16" started-at="2019-11-13T02:22:46Z" finished-at="2019-11-13T02:22:46Z">
+    <test name="Default test" duration-ms="24106" started-at="2019-11-15T16:05:15Z" finished-at="2019-11-15T16:05:40Z">
+      <class name="com.training.sanity.tests.MediumSecondShopUniform">
+        <test-method status="PASS" signature="setUpBeforeClass()[pri:0, instance:com.training.sanity.tests.MediumSecondShopUniform@a4a92b]" name="setUpBeforeClass" is-config="true" duration-ms="16" started-at="2019-11-15T10:05:15Z" finished-at="2019-11-15T10:05:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpBeforeClass -->
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.PositiveLoginTest@a4a92b]" name="setUp" is-config="true" duration-ms="15434" started-at="2019-11-13T02:22:46Z" finished-at="2019-11-13T02:23:01Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.training.sanity.tests.MediumSecondShopUniform@a4a92b]" name="setUp" is-config="true" duration-ms="15097" started-at="2019-11-15T10:05:16Z" finished-at="2019-11-15T10:05:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="positiveLoginProcess()[pri:0, instance:com.training.sanity.tests.PositiveLoginTest@a4a92b]" name="positiveLoginProcess" duration-ms="2896" started-at="2019-11-13T02:23:01Z" finished-at="2019-11-13T02:23:04Z">
+        <test-method status="PASS" signature="shopUniform()[pri:0, instance:com.training.sanity.tests.MediumSecondShopUniform@a4a92b]" name="shopUniform" duration-ms="7980" started-at="2019-11-15T10:05:31Z" finished-at="2019-11-15T10:05:39Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- positiveLoginProcess -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.PositiveLoginTest@a4a92b]" name="tearDown" is-config="true" duration-ms="1007" started-at="2019-11-13T02:23:04Z" finished-at="2019-11-13T02:23:05Z">
+        </test-method> <!-- shopUniform -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.training.sanity.tests.MediumSecondShopUniform@a4a92b]" name="tearDown" is-config="true" duration-ms="1002" started-at="2019-11-15T10:05:39Z" finished-at="2019-11-15T10:05:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.training.sanity.tests.PositiveLoginTest -->
+      </class> <!-- com.training.sanity.tests.MediumSecondShopUniform -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

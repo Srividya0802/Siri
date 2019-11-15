@@ -38,11 +38,25 @@ private WebDriver driver;
 	@FindBy(linkText="Forgotten Password")
 	private WebElement forgtpwd;
 	
+	@FindBy(xpath="//*[@id='banner0']/div/a/img")
+	public WebElement shopPremiumSchoolUniform;
+	
+	@FindBy(xpath="//*[@id='featured-grid']/div[2]/div/div/div[1]/a/img")
+	public WebElement RegularTshirt;
 	
 	public void sendUemail(String mail) {
 		this.iemail.clear();
 		this.iemail.sendKeys(mail);
-	}
+		}
+	
+	public void clickshopPremiumSchoolUniform() {
+		this.shopPremiumSchoolUniform.click();
+		}
+	
+	public void clickRegularTshirt() {
+		this.RegularTshirt.click();
+		}
+	
 	
 	public void sendPassword(String pass) {
 		this.password.clear(); 
@@ -63,6 +77,10 @@ private WebDriver driver;
 	
 	public void clickuserAccountBtn() {
 		this.userAccount.click(); 
+			}
+	
+	public void clickBtn(WebElement xyz) {
+	xyz.click(); 
 			}
 
 }
