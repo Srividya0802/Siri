@@ -31,6 +31,9 @@ private WebDriver driver;
 	@FindBy(xpath="//div/div[2]/div/form/input")
 	private WebElement submit_login;
 	
+	@FindBy(xpath="//div[@id='logo']/h1/a")
+	public WebElement uniformstorelogo;
+	
 	@FindBy(className="alert-danger")
 	public WebElement errMesg;
 	

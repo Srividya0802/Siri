@@ -61,12 +61,9 @@ public class MediumSecondShopUniform {
 	public void tearDown() throws Exception {
 		Thread.sleep(1000);
 				//driver.quit();
-
-	}
-	
-	@Test
+}
+		@Test
 	public void shopUniform() throws InterruptedException {
-		
 		ufrmLgnPom.clickshopPremiumSchoolUniform();
 		ufrmLgnPom.clickRegularTshirt();
 		selProdPom.selectChestSize("965");
@@ -74,7 +71,7 @@ public class MediumSecondShopUniform {
 		cPom.clickCartBtn();
 				//Thread.sleep(1000);
 		WebDriverWait webwait = new WebDriverWait(driver,20);
-		webwait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//*[@id='cart']/ul/li[1]/table/tbody/tr/td[2]/small"))));
+		webwait.until(ExpectedConditions.visibilityOf(cPom.cartProdChstSize));
 		//Cart verification
 		cPom.verifyCartDetails();
 		cPom.cartViewCartBtn.click();

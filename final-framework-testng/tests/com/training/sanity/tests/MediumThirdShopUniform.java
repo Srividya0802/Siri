@@ -7,7 +7,9 @@ import java.util.Properties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -15,7 +17,13 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.training.generics.ScreenShot;
+import com.training.pom.CartPOM;
+import com.training.pom.CheckoutPom;
+import com.training.pom.ProductConfirmPom;
+import com.training.pom.SelectedProductPOM;
 import com.training.pom.UniformLoginPOM;
+import com.training.pom.ViewCartPOM;
+
 import com.training.utility.DriverFactory;
 import com.training.utility.DriverNames;
 
@@ -23,6 +31,11 @@ public class MediumThirdShopUniform {
 	private WebDriver driver;
 	private String baseUrl;
 	private UniformLoginPOM ufrmLgnPom; 
+	private SelectedProductPOM selProdPom; 
+	private CartPOM cPom;
+	private ViewCartPOM vcartPom;
+	private CheckoutPom chkoutPom;
+	private ProductConfirmPom PdtConfPom;
 	private static Properties properties;
 	private ScreenShot screenShot;
 	
@@ -32,13 +45,17 @@ public class MediumThirdShopUniform {
 		properties = new Properties();
 		FileInputStream inStream = new FileInputStream("./resources/others.properties");
 		properties.load(inStream);
-		
-	}
+			}
 
 	@BeforeMethod
 	public void setUp() throws Exception {
 		driver = DriverFactory.getDriver(DriverNames.CHROME);
 		ufrmLgnPom = new UniformLoginPOM(driver); 
+		selProdPom = new SelectedProductPOM(driver);
+		cPom = new CartPOM(driver);
+		vcartPom = new ViewCartPOM(driver);
+		chkoutPom = new CheckoutPom(driver);
+		PdtConfPom = new ProductConfirmPom(driver);
 		baseUrl = properties.getProperty("baseURL");
 		screenShot = new ScreenShot(driver); 
 		// open the browser 
@@ -53,31 +70,39 @@ public class MediumThirdShopUniform {
 	}
 	
 	@Test
-	public void shopUniform() {
+	public void shopUniform() throws InterruptedException {
 		ufrmLgnPom.clickuserAccountBtn();
 		ufrmLgnPom.clickLoginBtn();
-		ufrmLgnPom.sendUemail("Neha@gmail.com");
+		ufrmLgnPom.sendUemail("neha@gmail.com");
 		ufrmLgnPom.sendPassword("Neha123");
 		ufrmLgnPom.clickSubmitLoginBtn();
-		driver.findElement(By.xpath(("//div[@id='banner0']/div/a/img"))).click();
-		driver.findElement(By.xpath("//*[@id='featured-grid']/div[2]/div/div/div[1]/a/img")).click();
-		Select chestsize= new Select(driver.findElement(By.id("input-option382")));
-		chestsize.selectByValue("975");
-		driver.findElement(By.id("button-cart")).click();
-		//Actions cart = new Actions(driver);
-		//cart.moveToElement(driver.findElement(By.xpath("//div[@class='btn-group btn-block']")));
-		driver.findElement(By.xpath("//div[@class='btn-group btn-block']")).click();
-		driver.findElement(By.xpath("//*[@id='cart']/ul/li[2]/div/p/a[1]/strong")).click();
-		//View Cart Verification
-		Assert.assertTrue(driver.findElement(By.xpath("//*[@id='content']/form/div/table/tbody/tr/td[1]/a/img")).isDisplayed());
-		Assert.assertEquals(driver.findElement(By.xpath("//*[@id='content']/form/div/table/tbody/tr/td[2]/a ")).getText(), "REGULAR T-SHIRTS (YELLOW)");
-		Assert.assertEquals(driver.findElement(By.xpath("//*[@id='content']/form/div/table/tbody/tr/td[2]/small ")).getText(), "Chest Size: 20");
-		Assert.assertEquals(driver.findElement(By.xpath("//*[@id='content']/form/div/table/tbody/tr/td[3]")).getText(),"TBSM-NUR-3rdSTD");
-		Assert.assertEquals(driver.findElement(By.xpath("//*[@id='content']/form/div/table/tbody/tr/td[4]/div/input")).getAttribute("Value"),"1");
-		Assert.assertEquals(driver.findElement(By.xpath("//*[@id='content']/form/div/table/tbody/tr/td[5]")).getText(),"₹368");
-		Assert.assertEquals(driver.findElement(By.xpath("//*[@id='content']/form/div/table/tbody/tr/td[6]")).getText(),"₹368");
-		driver.findElement(By.xpath("//*[id='content']/div[2]/div[2]/a")).click();
-		
+		ufrmLgnPom.uniformstorelogo.click();
+		ufrmLgnPom.clickshopPremiumSchoolUniform();
+		ufrmLgnPom.clickRegularTshirt();
+		selProdPom.selectChestSize("965");
+		selProdPom.clickaddTocartBtn();
+		cPom.clickCartBtn();
+						//Thread.sleep(1000);
+		WebDriverWait webwait = new WebDriverWait(driver,20);
+		webwait.until(ExpectedConditions.visibilityOf(cPom.cartProdChstSize));
+		//Cart verification
+		cPom.verifyCartDetails();
+		cPom.cartViewCartBtn.click();
+		vcartPom.verifyViewCartDetails();
+		//click on checkout and very  title
+		vcartPom.viewCartCheckOut.click();
+		Assert.assertEquals(driver.getTitle(), "Checkout");
+		chkoutPom.checkBillingAdd();
+		chkoutPom.clickcontinueBtnoncheckout();
+		Thread.sleep(1000);
+		chkoutPom.SendAbturorder("Please Deliver between 7am to 10 am");
+		driver.findElement(By.id("button-shipping-method")).click();
+		WebDriverWait k = new WebDriverWait(driver,20);
+		k.until(ExpectedConditions.elementToBeClickable(chkoutPom.AgreetoDeliveryInfo));
+		chkoutPom.clickAgreetoDeliveryInfoBtn();
+		chkoutPom.clickcontinuetoPayoBtn();
+		PdtConfPom.verifyProdConfirmation();
+		PdtConfPom.clickconfirmordr();
 	}
 	
 }

@@ -22,7 +22,7 @@ private WebDriver driver;
 	private WebElement cartProd;
 	
 	@FindBy(xpath="//*[@id='cart']/ul/li[1]/table/tbody/tr/td[2]/small")
-	private WebElement cartProdChstSize;
+	public WebElement cartProdChstSize;
 	
 	@FindBy(xpath="//*[@id='cart']/ul/li[1]/table/tbody/tr/td[4]")
 	private WebElement cartProdAmt;
