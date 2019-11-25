@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Nov 19 04:45:43 CST 2019</td>
+<td>Started on:</td><td>Mon Nov 25 08:19:42 CST 2019</td>
 </tr>
-<tr><td>Total time:</td><td>33 seconds (33795 ms)</td>
+<tr><td>Total time:</td><td>126 seconds (126170 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,150 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.training.sanity.tests.ComplexTest3.registerationProcessTest()'><b>registerationProcessTest</b><br>Test class: com.training.sanity.tests.ComplexTest3<br>Parameters: vaibhavi, mathur, vaibhav, 9744666483, B.T.M layout, bangalore, bangalore, 560016, India, Karnataka, vaibhavi, vaibhavi</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at com.training.sanity.tests.ComplexTest3.registerationProcessTest(ComplexTest3.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
+	at org.testng.TestNG.run(TestNG.java:1033)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div><a href='#' onClick='toggleBox("stack-trace21609641", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace21609641'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at com.training.sanity.tests.ComplexTest3.registerationProcessTest(ComplexTest3.java:77)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
+	at org.testng.TestNG.run(TestNG.java:1033)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>6</td>
+<td>com.training.sanity.tests.ComplexTest3@1ccaa</td></tr>
+<tr>
+<td title='com.training.sanity.tests.ComplexTest3.registerationProcessTest()'><b>registerationProcessTest</b><br>Test class: com.training.sanity.tests.ComplexTest3<br>Parameters: neethi, mohan, neethi@gmail.com, hgtttww, Gokulam, Mysore, Mysore, 571234, India, Mysore, neethi, neethi</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Mysore
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.6.0&apos;, revision: &apos;6fbf3ec767&apos;, time: &apos;2017-09-27T15:28:36.4Z&apos;
+System info: host: &apos;DESKTOP-VGET4HH&apos;, ip: &apos;192.168.43.61&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:151)
+	at com.training.pom.RegistrationPOM.selectRegiondatadriven(RegistrationPOM.java:82)
+	at com.training.sanity.tests.ComplexTest3.registerationProcessTest(ComplexTest3.java:71)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
+	at org.testng.TestNG.run(TestNG.java:1033)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div><a href='#' onClick='toggleBox("stack-trace25571158", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace25571158'><pre>org.openqa.selenium.NoSuchElementException: Cannot locate element with text: Mysore
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.6.0&apos;, revision: &apos;6fbf3ec767&apos;, time: &apos;2017-09-27T15:28:36.4Z&apos;
+System info: host: &apos;DESKTOP-VGET4HH&apos;, ip: &apos;192.168.43.61&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_161&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:151)
+	at com.training.pom.RegistrationPOM.selectRegiondatadriven(RegistrationPOM.java:82)
+	at com.training.sanity.tests.ComplexTest3.registerationProcessTest(ComplexTest3.java:71)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:663)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:849)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1157)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:124)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:771)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:357)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:352)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:310)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:259)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1200)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1125)
+	at org.testng.TestNG.run(TestNG.java:1033)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:111)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:204)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:175)
+</pre></div></td>
+<td>36</td>
+<td>com.training.sanity.tests.ComplexTest3@1ccaa</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -75,10 +219,15 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.training.sanity.tests.MediumThirdShopUniform.shopUniform()'><b>shopUniform</b><br>Test class: com.training.sanity.tests.MediumThirdShopUniform</td>
+<td title='com.training.sanity.tests.ComplexTest3.registerationProcessTest()'><b>registerationProcessTest</b><br>Test class: com.training.sanity.tests.ComplexTest3<br>Parameters: rakhi, 23456, vid1234@gmail.com, 9876567738, K.R. Road, bangalore, bangalore, 560012, India, Karnataka, rakhi, rakhi</td>
 <td></td>
-<td>18</td>
-<td>com.training.sanity.tests.MediumThirdShopUniform@a4a92b</td></tr>
+<td>9</td>
+<td>com.training.sanity.tests.ComplexTest3@1ccaa</td></tr>
+<tr>
+<td title='com.training.sanity.tests.ComplexTest3.registerationProcessTest()'><b>registerationProcessTest</b><br>Test class: com.training.sanity.tests.ComplexTest3<br>Parameters: Diya, Krishna, diya112asd@gmail.com, 7123457656, Hitec city, hyderabad, hyderabad, 9876547, India, Telangana, diya, diya</td>
+<td></td>
+<td>7</td>
+<td>com.training.sanity.tests.ComplexTest3@1ccaa</td></tr>
 </table><p>
 </body>
 </html>

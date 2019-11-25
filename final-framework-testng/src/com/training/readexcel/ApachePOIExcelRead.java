@@ -2,6 +2,8 @@ package com.training.readexcel;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.util.Iterator;
 
 import org.apache.poi.ss.usermodel.Cell;
@@ -61,16 +63,28 @@ public class ApachePOIExcelRead {
 					switch (cell.getCellType()) {
 
 					case Cell.CELL_TYPE_NUMERIC:
+						//code added by me
+						double num = cell.getNumericCellValue();
+						DecimalFormat pattern = new DecimalFormat("#,#,#,#,#,#,#,#,#,#");
+						NumberFormat testNumberFormat = NumberFormat.getNumberInstance();
+						String mob = testNumberFormat.format(num);
+						Number n = null;
+						n = pattern.parse(mob);
+						tempList1[cellCount]=n.toString();
+						//code added by me
 						
-						if(((Double) cell.getNumericCellValue()).toString()!=null){
-							tempList1[cellCount] = ((Double) cell.getNumericCellValue()).toString(); 
-						} 
+						/*Actual code
+						 * if(((Double) cell.getNumericCellValue()).toString()!=null){
+						tempList1[cellCount] = ((Double) cell.getNumericCellValue()).toString(); 
+						} Actual Code*/								
 						break;
 					case Cell.CELL_TYPE_STRING:
 						if(cell.getStringCellValue()!=null){
 							tempList1[cellCount] =cell.getStringCellValue();
 						}
 						break;
+						
+					
 					}
 					cellCount ++; 
 				}

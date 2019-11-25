@@ -60,7 +60,7 @@ public class MediumSecondShopUniform {
 	@AfterMethod
 	public void tearDown() throws Exception {
 		Thread.sleep(1000);
-				//driver.quit();
+				driver.quit();
 }
 		@Test
 	public void shopUniform() throws InterruptedException {

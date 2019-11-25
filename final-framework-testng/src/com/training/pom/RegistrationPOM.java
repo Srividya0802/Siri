@@ -36,6 +36,9 @@ private WebDriver driver;
 	@FindBy(id="input-address-1")
 	private WebElement add1;
 	
+	@FindBy(id="input-address-2")
+	private WebElement add2;
+	
 	@FindBy(id="input-city")
 	private WebElement city; 
 	
@@ -72,6 +75,12 @@ private WebDriver driver;
 		Select regId = new Select(zone);
 		regId.selectByValue(rid);
 	}
+	
+	
+	public void selectRegiondatadriven(String rid) {
+		Select regId = new Select(zone);
+		regId.selectByVisibleText(rid);
+	}
 	 
 		
 		public void selectCountry(String cid) {
@@ -98,6 +107,11 @@ private WebDriver driver;
 	public void sendAddress1(String ad) {
 		this.add1.clear();
 		this.add1.sendKeys(ad);
+			}
+	
+	public void sendAddress2(String ad) {
+		this.add2.clear();
+		this.add2.sendKeys(ad);
 			}
 	
 	public void sendCity(String c) {
